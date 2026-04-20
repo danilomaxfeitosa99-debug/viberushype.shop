@@ -1,54 +1,1491 @@
-<!DOCTYPE html>
-<html lang="hu">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Felhasználási Feltételek — Elegancia Méz</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;600&family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Quicksand',sans-serif;background:#fdf8f5;color:#5a4f48;line-height:1.8;font-size:14px;-webkit-font-smoothing:antialiased}
-.w{max-width:520px;margin:0 auto;padding:30px 20px 50px}
-h1{font-family:'Bodoni Moda',serif;font-size:22px;color:#3d2f2a;margin-bottom:16px;font-weight:600}
-h2{font-family:'Bodoni Moda',serif;font-size:16px;color:#4a3f3a;margin:18px 0 6px;font-weight:600}
-p{margin-bottom:10px;font-weight:300;font-size:13px}
-a{color:#c9956f;text-decoration:none}a:hover{text-decoration:underline}
-.back{display:inline-block;margin-bottom:16px;font-size:12px;color:#c9956f}
-footer{max-width:520px;margin:0 auto;padding:12px 20px;text-align:center;font-size:7.5px;color:#c4a89a;border-top:1px solid #e8d4c8}
-</style>
-</head>
-<body>
-<div class="w">
-<a href="index.html" class="back">← Vissza a főoldalra</a>
-<h1>Felhasználási Feltételek</h1>
-<p><strong>Utolsó frissítés:</strong> 2026. január 1.</p>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="description"
+      content="Terms of Use — The rules and conditions governing your use of this website, including intellectual property, disclaimers, and liability limitations."
+    />
+    <title>Terms of Use</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      ::before,
+      ::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --bg: #07090f;
+        --surface: rgba(255, 255, 255, 0.04);
+        --surface2: rgba(255, 255, 255, 0.07);
+        --border: rgba(255, 255, 255, 0.08);
+        --border2: rgba(255, 255, 255, 0.14);
+        --accent: #10b981;
+        --accent2: #34d399;
+        --accent-glow: rgba(16, 185, 129, 0.12);
+        --text: rgba(255, 255, 255, 0.92);
+        --muted: rgba(255, 255, 255, 0.45);
+        --dim: rgba(255, 255, 255, 0.15);
+        --blur: blur(20px) saturate(160%);
+        --r: 14px;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        font-size: 15px;
+        line-height: 1.75;
+        -webkit-font-smoothing: antialiased;
+        min-height: 100vh;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background:
+          radial-gradient(
+            ellipse 60% 40% at 90% 5%,
+            rgba(16, 185, 129, 0.07) 0%,
+            transparent 55%
+          ),
+          radial-gradient(
+            ellipse 50% 35% at 5% 95%,
+            rgba(52, 211, 153, 0.05) 0%,
+            transparent 55%
+          );
+        pointer-events: none;
+        z-index: 0;
+      }
+      #root {
+        position: relative;
+        z-index: 1;
+      }
+      a {
+        color: var(--accent2);
+        text-decoration: none;
+        transition: opacity 0.2s;
+      }
+      a:hover {
+        opacity: 0.75;
+        text-decoration: underline;
+      }
+      ::-webkit-scrollbar {
+        width: 5px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 99px;
+      }
 
-<h2>1. Általános rendelkezések</h2>
-<p>Az Elegancia Méz weboldal (CNPJ: 60.836.441/0001-50) használatával Ön elfogadja az alábbi feltételeket. Kérjük, figyelmesen olvassa el őket.</p>
+      /* ── NAV ── */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(7, 9, 15, 0.88);
+        backdrop-filter: var(--blur);
+        -webkit-backdrop-filter: var(--blur);
+        border-bottom: 1px solid var(--border);
+        padding: 0 5%;
+      }
+      .nav-inner {
+        max-width: 1080px;
+        margin: 0 auto;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo {
+        font-family: "Syne", sans-serif;
+        font-weight: 800;
+        font-size: 18px;
+        color: var(--text);
+        letter-spacing: -0.02em;
+      }
+      .logo em {
+        font-style: normal;
+        color: var(--accent2);
+      }
+      .nav-links {
+        display: flex;
+        gap: 4px;
+        list-style: none;
+      }
+      .nav-links a {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        padding: 6px 14px;
+        border-radius: 8px;
+        transition: all 0.2s;
+        text-decoration: none;
+      }
+      .nav-links a:hover {
+        color: var(--accent2);
+        background: var(--accent-glow);
+      }
 
-<h2>2. A tartalom jellege</h2>
-<p>Weboldalunk kizárólag tájékoztató jellegű tartalmat közöl. Az itt megjelenő információk nem minősülnek orvosi, egészségügyi vagy szakmai tanácsadásnak.</p>
+      /* ── PAGE HEADER ── */
+      .page-header {
+        padding: 4rem 5% 3rem;
+        border-bottom: 1px solid var(--border);
+        background: linear-gradient(
+          180deg,
+          rgba(16, 185, 129, 0.04) 0%,
+          transparent 100%
+        );
+      }
+      .page-header-inner {
+        max-width: 1080px;
+        margin: 0 auto;
+      }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--accent2);
+        background: var(--accent-glow);
+        border: 1px solid rgba(16, 185, 129, 0.25);
+        padding: 4px 14px;
+        border-radius: 99px;
+        margin-bottom: 1.2rem;
+      }
+      .eyebrow::before {
+        content: "";
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--accent2);
+      }
+      .page-header h1 {
+        font-family: "Syne", sans-serif;
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        margin-bottom: 0.75rem;
+      }
+      .page-header .meta {
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .page-header .meta strong {
+        color: var(--dim);
+      }
 
-<h2>3. Felelősség korlátozása</h2>
-<p>A weboldalon található információk általános tájékoztató célokat szolgálnak. Nem vállalunk felelősséget az információk felhasználásából eredő esetleges károkért. Bármilyen egészségügyi döntés előtt konzultáljon szakemberrel.</p>
+      /* ── LAYOUT ── */
+      .layout {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 3rem 5% 6rem;
+        display: grid;
+        grid-template-columns: 240px 1fr;
+        gap: 3rem;
+        align-items: start;
+      }
 
-<h2>4. Szellemi tulajdon</h2>
-<p>A weboldalon megjelenő szövegek, képek és egyéb tartalmak szerzői jogi védelem alatt állnak. Azok másolása, terjesztése vagy felhasználása kizárólag előzetes írásbeli engedélyünkkel lehetséges.</p>
+      /* ── SIDEBAR TOC ── */
+      .toc {
+        position: sticky;
+        top: 76px;
+      }
+      .toc-label {
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--muted);
+        margin-bottom: 0.9rem;
+      }
+      .toc-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+      }
+      .toc-list a {
+        font-size: 12.5px;
+        color: var(--muted);
+        padding: 5px 12px;
+        border-radius: 8px;
+        display: block;
+        border-left: 2px solid transparent;
+        transition: all 0.15s;
+        text-decoration: none;
+      }
+      .toc-list a:hover {
+        color: var(--accent2);
+        background: var(--accent-glow);
+        border-left-color: var(--accent2);
+      }
+      .toc-divider {
+        height: 1px;
+        background: var(--border);
+        margin: 0.6rem 0;
+      }
 
-<h2>5. Külső hivatkozások</h2>
-<p>Weboldalunk tartalmazhat külső weboldalakra mutató hivatkozásokat. Ezen oldalak tartalmáért és adatvédelmi gyakorlatáért nem vállalunk felelősséget.</p>
+      /* ── SECTION CARDS ── */
+      .sections {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      .summary-banner {
+        background: var(--accent-glow);
+        border: 1px solid rgba(16, 185, 129, 0.25);
+        border-radius: var(--r);
+        padding: 1.2rem 1.5rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        gap: 0.75rem;
+        align-items: flex-start;
+      }
+      .summary-banner .icon {
+        font-size: 20px;
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
+      .summary-banner p {
+        font-size: 13.5px;
+        color: rgba(110, 231, 183, 0.9);
+        line-height: 1.7;
+        margin: 0;
+      }
+      .summary-banner strong {
+        color: #a7f3d0;
+      }
 
-<h2>6. Módosítások</h2>
-<p>Fenntartjuk a jogot, hogy a jelen feltételeket bármikor módosítsuk. A módosításokat a weboldalon tesszük közzé.</p>
+      .sec {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--r);
+        padding: 2rem;
+        margin-bottom: 1rem;
+        scroll-margin-top: 76px;
+        transition: border-color 0.2s;
+      }
+      .sec:hover {
+        border-color: var(--border2);
+      }
+      .sec-header {
+        display: flex;
+        align-items: center;
+        gap: 0.65rem;
+        margin-bottom: 1.25rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .sec-num {
+        display: inline-flex;
+        width: 26px;
+        height: 26px;
+        background: var(--accent-glow);
+        color: var(--accent2);
+        border: 1px solid rgba(16, 185, 129, 0.3);
+        border-radius: 8px;
+        font-size: 11px;
+        font-weight: 700;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .sec h2 {
+        font-family: "Syne", sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--text);
+        letter-spacing: -0.01em;
+      }
+      p {
+        font-size: 14px;
+        line-height: 1.8;
+        color: rgba(255, 255, 255, 0.65);
+        margin-bottom: 0.85rem;
+      }
+      p:last-child {
+        margin-bottom: 0;
+      }
+      ul,
+      ol {
+        padding-left: 1.2rem;
+        margin-bottom: 0.85rem;
+      }
+      li {
+        font-size: 14px;
+        line-height: 1.8;
+        color: rgba(255, 255, 255, 0.65);
+        margin-bottom: 0.25rem;
+      }
+      li strong,
+      p strong {
+        color: rgba(255, 255, 255, 0.85);
+        font-weight: 600;
+      }
+      .callout {
+        border-radius: 10px;
+        padding: 0.9rem 1.1rem;
+        margin: 0.85rem 0;
+        display: flex;
+        gap: 0.7rem;
+        align-items: flex-start;
+      }
+      .callout .ci {
+        font-size: 16px;
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
+      .callout p {
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.7;
+      }
+      .callout-info {
+        background: rgba(16, 185, 129, 0.08);
+        border: 1px solid rgba(16, 185, 129, 0.2);
+      }
+      .callout-info p {
+        color: rgba(110, 231, 183, 0.9);
+      }
+      .callout-warn {
+        background: rgba(234, 179, 8, 0.08);
+        border: 1px solid rgba(234, 179, 8, 0.2);
+      }
+      .callout-warn p {
+        color: rgba(253, 224, 71, 0.85);
+      }
+      .callout-red {
+        background: rgba(239, 68, 68, 0.08);
+        border: 1px solid rgba(239, 68, 68, 0.2);
+      }
+      .callout-red p {
+        color: rgba(252, 165, 165, 0.9);
+      }
+      .caps {
+        font-size: 12.5px;
+        line-height: 1.8;
+        color: rgba(255, 255, 255, 0.55);
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 1rem 1.2rem;
+        margin: 0.85rem 0;
+      }
+      footer {
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: var(--blur);
+        border-top: 1px solid var(--border);
+        padding: 2.5rem 5%;
+      }
+      .footer-inner {
+        max-width: 1080px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .footer-logo {
+        font-family: "Syne", sans-serif;
+        font-weight: 800;
+        font-size: 16px;
+      }
+      .footer-logo em {
+        font-style: normal;
+        color: var(--accent2);
+      }
+      .footer-links {
+        display: flex;
+        gap: 1.25rem;
+        list-style: none;
+      }
+      .footer-links a {
+        font-size: 12px;
+        color: var(--muted);
+      }
+      .footer-links a:hover {
+        color: var(--accent2);
+      }
+      .footer-copy {
+        font-size: 11px;
+        color: var(--muted);
+        width: 100%;
+        margin-top: 0.5rem;
+      }
+      @media (max-width: 780px) {
+        .layout {
+          grid-template-columns: 1fr;
+        }
+        .toc {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <header>
+        <div class="nav-inner">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+      </header>
 
-<h2>7. Kapcsolat</h2>
-<p>Kérdéseivel forduljon hozzánk weboldalunkon keresztül.</p>
-</div>
-<footer>
-<p><a href="index.html">Főoldal</a> · <a href="privacy.html">Adatvédelem</a></p>
-<p style="margin-top:2px">© 2026 Elegancia Méz · CNPJ: 60.836.441/0001-50</p>
-</footer>
-</body>
+      <div class="layout">
+        <aside class="toc">
+          <p class="toc-label">Contents</p>
+          <ul class="toc-list">
+            <li><a href="#t1">1. Acceptance</a></li>
+            <li><a href="#t2">2. Service Description</a></li>
+            <li><a href="#t3">3. Eligibility</a></li>
+            <li><a href="#t4">4. Intellectual Property</a></li>
+            <li><a href="#t5">5. License to Use</a></li>
+            <li><a href="#t6">6. Prohibited Conduct</a></li>
+            <li><a href="#t7">7. Medical Disclaimer</a></li>
+            <li><a href="#t8">8. Google Ads Compliance</a></li>
+            <li><a href="#t9">9. Affiliate Disclosure</a></li>
+            <li><a href="#t10">10. User-Submitted Content</a></li>
+            <div class="toc-divider"></div>
+            <li><a href="#t11">11. Disclaimer of Warranties</a></li>
+            <li><a href="#t12">12. Limitation of Liability</a></li>
+            <li><a href="#t13">13. Indemnification</a></li>
+            <li><a href="#t14">14. Third-Party Links</a></li>
+            <li><a href="#t15">15. Accuracy &amp; Revisions</a></li>
+            <li><a href="#t16">16. Privacy Policy</a></li>
+            <li><a href="#t17">17. DMCA / Copyright</a></li>
+            <li><a href="#t18">18. Modifications</a></li>
+            <li><a href="#t19">19. Termination</a></li>
+            <li><a href="#t20">20. Governing Law</a></li>
+            <div class="toc-divider"></div>
+            <li><a href="#t21">21. Dispute Resolution</a></li>
+            <li><a href="#t22">22. Severability</a></li>
+            <li><a href="#t23">23. Entire Agreement</a></li>
+            <li><a href="#t24">24. Contact</a></li>
+          </ul>
+        </aside>
+
+        <main class="sections">
+          <div class="summary-banner">
+            <div class="icon">📋</div>
+            <p>
+              <strong>Key points:</strong> By using this Site, you agree to
+              these Terms. This Site is for informational purposes only and does
+              not constitute professional advice. We use Google Ads for
+              advertising. See our <a href="privacy.html">Privacy Policy</a> for
+              data practices. Content is provided "as is" without warranties.
+              Please read these Terms fully before using the Site.
+            </p>
+          </div>
+
+          <div class="sec" id="t1">
+            <div class="sec-header">
+              <span class="sec-num">1</span>
+              <h2>Acceptance of Terms</h2>
+            </div>
+            <p>
+              These Terms of Use ("Terms," "Agreement") constitute a legally
+              binding agreement between you ("User," "you," or "your") and the
+              operator of this website ("we," "us," or "our"), governing your
+              access to and use of this website, including all content,
+              features, functionality, and services offered through it
+              (collectively, the "Site").
+            </p>
+            <p>
+              <strong>By accessing or using the Site in any manner</strong> —
+              including browsing pages, clicking links, viewing advertisements,
+              or submitting information — you acknowledge that you have read,
+              understood, and agree to be bound by these Terms and our
+              <a href="privacy.html">Privacy Policy</a>, which is incorporated
+              herein by reference.
+            </p>
+            <p>
+              If you do not agree with any part of these Terms, you must
+              immediately cease all use of the Site. Your continued use of the
+              Site following the posting of any changes to these Terms
+              constitutes acceptance of those changes.
+            </p>
+            <p>
+              If you are using the Site on behalf of a company, organization, or
+              other legal entity, you represent and warrant that you have full
+              legal authority to bind that entity to these Terms, in which case
+              "you" also refers to that entity.
+            </p>
+          </div>
+
+          <div class="sec" id="t2">
+            <div class="sec-header">
+              <span class="sec-num">2</span>
+              <h2>Description of Service</h2>
+            </div>
+            <p>
+              This Site is a digital publication that provides general
+              informational, educational, and editorial content. The nature of
+              this content may include, but is not limited to, articles, guides,
+              commentary, and research summaries related to health, wellness,
+              lifestyle, finance, or other topics as indicated by the Site's
+              specific subject matter.
+            </p>
+            <p>The Site may also:</p>
+            <ul>
+              <li>
+                Display third-party advertisements served through
+                <strong>Google Ads</strong> and related advertising platforms
+              </li>
+              <li>
+                Include <strong>affiliate links</strong> to third-party products
+                and services from which we may earn a commission
+              </li>
+              <li>
+                Link to external websites, resources, and third-party content
+                for reference and informational purposes
+              </li>
+              <li>
+                Provide contact forms, subscription options, or other
+                interactive features
+              </li>
+            </ul>
+            <p>
+              We reserve the right, at our sole discretion and without prior
+              notice, to modify, suspend, restrict, or permanently discontinue
+              any aspect of the Site, including but not limited to content,
+              features, functionality, advertising integrations, and user
+              access, at any time and for any reason.
+            </p>
+          </div>
+
+          <div class="sec" id="t3">
+            <div class="sec-header">
+              <span class="sec-num">3</span>
+              <h2>Eligibility</h2>
+            </div>
+            <p>By using this Site, you represent and warrant that:</p>
+            <ul>
+              <li>
+                You are at least <strong>18 years of age</strong>, or if you are
+                between 13 and 18, that you are using the Site under the
+                supervision of a parent or legal guardian who agrees to be bound
+                by these Terms on your behalf
+              </li>
+              <li>
+                You have the legal capacity and authority to enter into this
+                Agreement
+              </li>
+              <li>
+                Your use of the Site does not violate any applicable laws or
+                regulations in your jurisdiction
+              </li>
+              <li>
+                You are not prohibited from receiving services under the laws of
+                the United States or any other applicable jurisdiction
+              </li>
+              <li>
+                You will not use the Site for any purpose that is unlawful or
+                prohibited by these Terms
+              </li>
+            </ul>
+            <p>
+              This Site is not directed to children under the age of 13. If you
+              are under 13, you may not use this Site or provide any personal
+              information to us. See our
+              <a href="privacy.html">Privacy Policy</a> for more information
+              about children's data.
+            </p>
+          </div>
+
+          <div class="sec" id="t4">
+            <div class="sec-header">
+              <span class="sec-num">4</span>
+              <h2>Intellectual Property Rights</h2>
+            </div>
+            <p>
+              All content available on or through this Site — including but not
+              limited to text, articles, editorials, graphics, images,
+              photographs, illustrations, logos, icons, audio clips, video
+              clips, data compilations, software, code, layout, design,
+              interface, and the overall "look and feel" of the Site — is either
+              owned by us or licensed to us and is protected by applicable
+              intellectual property laws, including:
+            </p>
+            <ul>
+              <li>United States and international copyright laws</li>
+              <li>Trademark and service mark laws</li>
+              <li>Trade secret and unfair competition laws</li>
+              <li>Database rights and sui generis protections</li>
+              <li>Other proprietary rights</li>
+            </ul>
+            <p>
+              All trademarks, service marks, trade names, logos, and other
+              proprietary marks used on this Site ("Marks") are the property of
+              their respective owners. Nothing in these Terms grants you any
+              right to use any of our Marks or the Marks of third parties
+              without the prior written permission of the applicable owner.
+            </p>
+            <p>
+              Unauthorized use of any content on this Site may violate
+              copyright, trademark, and other laws and could result in civil
+              and/or criminal penalties.
+            </p>
+          </div>
+
+          <div class="sec" id="t5">
+            <div class="sec-header">
+              <span class="sec-num">5</span>
+              <h2>License to Use the Site</h2>
+            </div>
+            <p>
+              Subject to your compliance with these Terms, we grant you a
+              <strong
+                >limited, non-exclusive, non-transferable, non-sublicensable,
+                revocable license</strong
+              >
+              to access and use the Site solely for your own personal,
+              non-commercial purposes.
+            </p>
+            <p><strong>This license does not include the right to:</strong></p>
+            <ul>
+              <li>
+                Copy, reproduce, distribute, publish, transmit, or publicly
+                display any content from the Site in whole or in part without
+                our prior written permission
+              </li>
+              <li>
+                Modify, adapt, translate, create derivative works from, or build
+                upon any content from the Site
+              </li>
+              <li>
+                Use any content from the Site for any commercial purpose,
+                including resale, sublicensing, or monetization without express
+                written authorization
+              </li>
+              <li>
+                Reverse engineer, disassemble, decompile, or otherwise attempt
+                to extract the source code of any software used on the Site
+              </li>
+              <li>
+                Remove, obscure, or alter any copyright, trademark, proprietary
+                notice, or attribution on any content from the Site
+              </li>
+              <li>
+                Systematically download, scrape, or extract content from the
+                Site using bots, crawlers, data mining tools, or any automated
+                means without our express written consent
+              </li>
+              <li>
+                Frame, mirror, or embed any portion of the Site on any other
+                website or application without our express written consent
+              </li>
+              <li>
+                Use the Site's content in any manner that could damage, disable,
+                overburden, or impair the Site or interfere with other users'
+                use of the Site
+              </li>
+            </ul>
+            <p>
+              Any use of the Site not expressly permitted by these Terms is a
+              breach of these Terms and may violate copyright, trademark, and
+              other applicable laws.
+            </p>
+          </div>
+
+          <div class="sec" id="t6">
+            <div class="sec-header">
+              <span class="sec-num">6</span>
+              <h2>Prohibited Conduct</h2>
+            </div>
+            <p>
+              You agree not to use the Site for any of the following prohibited
+              purposes or in any of the following prohibited ways:
+            </p>
+            <ul>
+              <li>
+                In violation of any applicable local, national, or international
+                law, regulation, or legal requirement
+              </li>
+              <li>
+                To transmit, distribute, or post any content that is unlawful,
+                harmful, threatening, abusive, harassing, defamatory, obscene,
+                invasive of another's privacy, or otherwise objectionable
+              </li>
+              <li>
+                To impersonate any person or entity, or to misrepresent your
+                identity, affiliation, or authorization
+              </li>
+              <li>
+                To collect or harvest personal information about other users
+                without their consent
+              </li>
+              <li>
+                To introduce any viruses, Trojan horses, worms, malware,
+                ransomware, spyware, adware, or any other harmful or disruptive
+                code or materials
+              </li>
+              <li>
+                To attempt to gain unauthorized access to any portion of the
+                Site, its related systems, networks, or servers, whether through
+                hacking, password mining, or any other means
+              </li>
+              <li>
+                To interfere with or disrupt the integrity or performance of the
+                Site or the data contained therein
+              </li>
+              <li>
+                To use the Site in any manner that imposes an unreasonable or
+                disproportionately large load on our infrastructure
+              </li>
+              <li>
+                To circumvent, disable, or otherwise interfere with
+                security-related features of the Site
+              </li>
+              <li>
+                To use the Site to send unsolicited bulk communications, spam,
+                or promotional material
+              </li>
+              <li>
+                To engage in any conduct that restricts or inhibits any other
+                person from using or enjoying the Site
+              </li>
+              <li>
+                To attempt to probe, scan, or test the vulnerability of the Site
+                or any associated system or network
+              </li>
+            </ul>
+            <p>
+              We reserve the right to investigate and take appropriate legal
+              action against anyone who violates this Section, including
+              reporting such activity to law enforcement authorities and
+              cooperating fully with any subsequent investigation.
+            </p>
+          </div>
+
+          <div class="sec" id="t7">
+            <div class="sec-header">
+              <span class="sec-num">7</span>
+              <h2>Medical &amp; Health Disclaimer</h2>
+            </div>
+            <div class="callout callout-red">
+              <span class="ci">🚨</span>
+              <p>
+                <strong>IMPORTANT:</strong> This Site does not provide medical
+                advice. Content is for general informational and educational
+                purposes only and is NOT a substitute for professional medical
+                advice, diagnosis, or treatment.
+              </p>
+            </div>
+            <p>
+              Nothing on this Site should be construed as medical advice, a
+              diagnosis, or a treatment recommendation. Always seek the advice
+              of your physician, licensed healthcare provider, or other
+              qualified health professional with any questions you may have
+              regarding a medical condition, health concern, or before
+              undertaking any new health-related regimen, including changes to
+              your diet, exercise routine, sleep habits, or use of supplements
+              or medications.
+            </p>
+            <p>
+              Never disregard professional medical advice or delay in seeking it
+              because of something you have read on this Site. If you think you
+              may have a medical emergency, call your doctor or emergency
+              services immediately.
+            </p>
+            <p>
+              The U.S. Food and Drug Administration (FDA) has not evaluated any
+              statements on this Site about supplements, natural products, or
+              health claims. Supplements and related products are not intended
+              to diagnose, treat, cure, or prevent any disease. Results
+              mentioned on this Site are not typical and may vary significantly
+              based on individual factors.
+            </p>
+            <p>
+              Any testimonials, success stories, or other anecdotal information
+              referenced on this Site represent individual experiences and do
+              not constitute a guarantee that you or anyone else will achieve
+              the same results.
+            </p>
+          </div>
+
+          <div class="sec" id="t8">
+            <div class="sec-header">
+              <span class="sec-num">8</span>
+              <h2>Advertising &amp; Google Ads Compliance</h2>
+            </div>
+            <p>
+              This Site displays third-party advertisements through
+              <strong>Google Ads</strong> and related Google advertising
+              services (including the Google Display Network and DoubleClick).
+              All advertising practices on this Site are conducted in full
+              compliance with:
+            </p>
+            <ul>
+              <li>
+                <a
+                  href="https://support.google.com/adspolicy/answer/6008942"
+                  target="_blank"
+                  rel="noopener"
+                  >Google Ads Destination Requirements</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://support.google.com/adspolicy/answer/6023676"
+                  target="_blank"
+                  rel="noopener"
+                  >Google Ads Content Policies</a
+                >
+              </li>
+              <li>
+                Google's policies on Misrepresentation, Unreliable Claims, and
+                Prohibited Practices
+              </li>
+              <li>
+                All applicable advertising standards and consumer protection
+                laws
+              </li>
+            </ul>
+            <p><strong>Advertising disclosures:</strong></p>
+            <ul>
+              <li>
+                Advertisements displayed on this Site are clearly
+                distinguishable from editorial content
+              </li>
+              <li>
+                This Site does not make false, misleading, or unsubstantiated
+                claims in connection with advertised products or services
+              </li>
+              <li>
+                We do not engage in cloaking, keyword insertion tricks, or other
+                deceptive practices
+              </li>
+              <li>
+                The content displayed to users is identical to the content
+                displayed to Google's crawlers and reviewers
+              </li>
+              <li>
+                This privacy policy is accessible from all pages of the Site,
+                including advertising landing pages
+              </li>
+            </ul>
+            <p>
+              We do not endorse, guarantee, or take responsibility for the
+              quality, accuracy, or reliability of products or services
+              advertised through Google Ads. Clicking on an advertisement may
+              take you to a third-party website with its own terms and privacy
+              policy.
+            </p>
+            <div class="callout callout-info">
+              <span class="ci">ℹ️</span>
+              <p>
+                This Site and its contents are not sponsored, endorsed,
+                approved, or affiliated with Google LLC. Google, YouTube, and
+                related marks and logos are trademarks of Google LLC. All other
+                trademarks are the property of their respective owners.
+              </p>
+            </div>
+          </div>
+
+          <div class="sec" id="t9">
+            <div class="sec-header">
+              <span class="sec-num">9</span>
+              <h2>Affiliate Disclosure &amp; Relationships</h2>
+            </div>
+            <p>
+              This Site may contain <strong>affiliate links</strong> — links to
+              products or services operated by third parties for which we may
+              receive a referral commission or other compensation when you click
+              the link and make a qualifying purchase or take a qualifying
+              action. This occurs at <strong>no additional cost to you</strong>.
+            </p>
+            <p>
+              <strong>Material relationship disclosure:</strong> As required by
+              the Federal Trade Commission (FTC) guidelines on endorsements and
+              testimonials (16 C.F.R. Part 255), we disclose that we may have a
+              material financial relationship with companies whose products or
+              services appear as affiliate links on this Site.
+            </p>
+            <p>
+              Our editorial content and recommendations are independent of our
+              affiliate relationships. We strive to recommend only products and
+              services that we genuinely believe may be relevant and potentially
+              valuable to our audience. However, you should be aware of the
+              potential for financial bias when evaluating any recommendation
+              that includes an affiliate link.
+            </p>
+            <p>
+              When you click an affiliate link, you will be directed to a
+              third-party website. Your interaction with that site — including
+              any purchase, registration, or other action — is governed solely
+              by that website's own terms of service and privacy policy, for
+              which we bear no responsibility.
+            </p>
+          </div>
+
+          <div class="sec" id="t10">
+            <div class="sec-header">
+              <span class="sec-num">10</span>
+              <h2>User-Submitted Content</h2>
+            </div>
+            <p>
+              If the Site allows you to submit, post, or transmit any content,
+              including comments, messages, feedback, or other materials ("User
+              Content"), you grant us a non-exclusive, worldwide, royalty-free,
+              perpetual, irrevocable, sublicensable, and transferable license to
+              use, reproduce, modify, adapt, publish, translate, distribute, and
+              display such User Content in connection with operating and
+              improving the Site.
+            </p>
+            <p>By submitting User Content, you represent and warrant that:</p>
+            <ul>
+              <li>
+                You own or have the necessary rights to submit the User Content
+              </li>
+              <li>
+                The User Content does not infringe any third-party intellectual
+                property rights, privacy rights, or other legal rights
+              </li>
+              <li>
+                The User Content is accurate, not misleading, and complies with
+                these Terms and all applicable laws
+              </li>
+              <li>
+                The User Content does not contain viruses, malware, or other
+                harmful elements
+              </li>
+            </ul>
+            <p>
+              We reserve the right to remove any User Content at our sole
+              discretion, without notice, for any reason, including content that
+              we determine violates these Terms, applicable laws, or our
+              community standards.
+            </p>
+          </div>
+
+          <div class="sec" id="t11">
+            <div class="sec-header">
+              <span class="sec-num">11</span>
+              <h2>Disclaimer of Warranties</h2>
+            </div>
+            <div class="callout callout-warn">
+              <span class="ci">⚠️</span>
+              <p>
+                Please read this section carefully. It significantly affects
+                your legal rights.
+              </p>
+            </div>
+            <div class="caps">
+              THE SITE AND ALL CONTENT, INFORMATION, MATERIALS, PRODUCTS, AND
+              SERVICES AVAILABLE THROUGH THE SITE ARE PROVIDED ON AN "AS IS" AND
+              "AS AVAILABLE" BASIS, WITHOUT ANY REPRESENTATION OR WARRANTY OF
+              ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE,
+              INCLUDING BUT NOT LIMITED TO: (A) ANY IMPLIED WARRANTY OF
+              MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, OR
+              NON-INFRINGEMENT; (B) ANY WARRANTY ARISING OUT OF COURSE OF
+              DEALING, COURSE OF PERFORMANCE, USAGE, OR TRADE PRACTICE; (C) ANY
+              WARRANTY THAT THE SITE WILL BE UNINTERRUPTED, ERROR-FREE, SECURE,
+              OR FREE OF VIRUSES, MALWARE, OR OTHER HARMFUL COMPONENTS; (D) ANY
+              WARRANTY AS TO THE ACCURACY, COMPLETENESS, RELIABILITY,
+              TIMELINESS, QUALITY, CURRENTNESS, OR SUITABILITY OF ANY CONTENT
+              FOR ANY PARTICULAR PURPOSE; OR (E) ANY WARRANTY THAT THE SITE WILL
+              MEET YOUR REQUIREMENTS OR THAT ANY DEFECTS IN THE SITE WILL BE
+              CORRECTED.
+            </div>
+            <p>
+              We do not warrant or make any representations regarding the use or
+              the results of the use of the Site, or any linked third-party
+              sites, in terms of their correctness, accuracy, reliability, or
+              otherwise. You assume the entire risk as to the quality and
+              performance of the Site and any content obtained through it.
+            </p>
+          </div>
+
+          <div class="sec" id="t12">
+            <div class="sec-header">
+              <span class="sec-num">12</span>
+              <h2>Limitation of Liability</h2>
+            </div>
+            <div class="callout callout-warn">
+              <span class="ci">⚠️</span>
+              <p>
+                This section limits our financial liability to you. Please read
+                it carefully.
+              </p>
+            </div>
+            <div class="caps">
+              TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT
+              SHALL WE, OUR OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, LICENSORS,
+              SERVICE PROVIDERS, SUCCESSORS, OR ASSIGNS BE LIABLE FOR ANY: (A)
+              INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, PUNITIVE, OR
+              EXEMPLARY DAMAGES; (B) DAMAGES FOR LOSS OF PROFITS, REVENUE,
+              GOODWILL, DATA, BUSINESS, OR ANTICIPATED SAVINGS; (C) DAMAGES
+              ARISING FROM YOUR USE OF OR INABILITY TO USE THE SITE; (D) DAMAGES
+              RESULTING FROM ANY CONTENT OBTAINED THROUGH THE SITE; (E) DAMAGES
+              ARISING FROM UNAUTHORIZED ACCESS TO OR ALTERATION OF YOUR DATA OR
+              TRANSMISSIONS; (F) DAMAGES ARISING FROM ANY HEALTH, FINANCIAL, OR
+              OTHER DECISION MADE IN RELIANCE ON CONTENT FOUND ON THIS SITE; OR
+              (G) ANY OTHER MATTER RELATING TO THE SITE.
+            </div>
+            <p>
+              THE FOREGOING LIMITATIONS SHALL APPLY REGARDLESS OF WHETHER SUCH
+              DAMAGES ARISE IN CONTRACT, TORT (INCLUDING NEGLIGENCE), STRICT
+              LIABILITY, OR ANY OTHER LEGAL OR EQUITABLE THEORY, AND REGARDLESS
+              OF WHETHER WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH
+              DAMAGES.
+            </p>
+            <p>
+              IN NO EVENT SHALL OUR TOTAL AGGREGATE LIABILITY TO YOU FOR ALL
+              CLAIMS ARISING OUT OF OR RELATED TO THESE TERMS OR YOUR USE OF THE
+              SITE EXCEED THE GREATER OF: (A) ONE HUNDRED US DOLLARS ($100 USD);
+              OR (B) THE TOTAL AMOUNT YOU HAVE PAID TO US (IF ANY) IN THE THREE
+              MONTHS PRECEDING THE CLAIM.
+            </p>
+            <p>
+              Some jurisdictions do not allow the exclusion or limitation of
+              liability for consequential or incidental damages, so the above
+              limitations may not apply to you in full. In such jurisdictions,
+              our liability is limited to the greatest extent permitted by law.
+            </p>
+          </div>
+
+          <div class="sec" id="t13">
+            <div class="sec-header">
+              <span class="sec-num">13</span>
+              <h2>Indemnification</h2>
+            </div>
+            <p>
+              You agree to
+              <strong>defend, indemnify, and hold harmless</strong> us and our
+              officers, directors, shareholders, employees, agents, contractors,
+              licensors, service providers, successors, and assigns from and
+              against any and all claims, demands, actions, suits, proceedings,
+              liabilities, damages, losses, judgments, awards, penalties, fines,
+              costs, and expenses (including reasonable attorneys' fees and
+              court costs) arising out of or relating to:
+            </p>
+            <ul>
+              <li>Your access to or use of the Site</li>
+              <li>
+                Your violation of these Terms or any applicable law or
+                regulation
+              </li>
+              <li>
+                Any User Content you submit, post, or transmit through the Site
+              </li>
+              <li>
+                Your violation of any third party's rights, including
+                intellectual property rights, privacy rights, or publicity
+                rights
+              </li>
+              <li>
+                Any misrepresentation made by you in connection with your use of
+                the Site
+              </li>
+              <li>
+                Any claims by third parties arising from your use of the Site
+              </li>
+            </ul>
+            <p>
+              We reserve the right, at your expense, to assume the exclusive
+              defense and control of any matter subject to indemnification by
+              you, and you agree to cooperate fully with our defense of such
+              claims.
+            </p>
+          </div>
+
+          <div class="sec" id="t14">
+            <div class="sec-header">
+              <span class="sec-num">14</span>
+              <h2>Third-Party Links &amp; Resources</h2>
+            </div>
+            <p>
+              The Site may contain links to websites, resources, services,
+              advertisements, or content operated or provided by third parties
+              ("Third-Party Content"). These links are provided for your
+              convenience and informational purposes only. We have no control
+              over the content, accuracy, privacy practices, policies, or
+              availability of any Third-Party Content.
+            </p>
+            <p>
+              We do not endorse, sponsor, or guarantee the accuracy, legality,
+              or completeness of any Third-Party Content, and we are not
+              responsible for any loss or damage that may arise from your use of
+              or reliance on any Third-Party Content. The inclusion of any
+              Third-Party Content on or linked from the Site does not imply our
+              endorsement, affiliation, or recommendation of that third party,
+              unless we have explicitly stated otherwise.
+            </p>
+            <p>
+              Your use of any third-party website or resource is at your own
+              risk and subject to that party's own terms of service and privacy
+              policy.
+            </p>
+          </div>
+
+          <div class="sec" id="t15">
+            <div class="sec-header">
+              <span class="sec-num">15</span>
+              <h2>Accuracy, Errors &amp; Revisions</h2>
+            </div>
+            <p>
+              The content appearing on the Site could include technical,
+              typographical, factual, or photographic errors. We do not
+              represent or warrant that any of the materials on the Site are
+              accurate, complete, current, or error-free.
+            </p>
+            <p>
+              We reserve the right, at our sole discretion, to correct any
+              errors, inaccuracies, or omissions; to change, update, or remove
+              content at any time without prior notice; and to modify, improve,
+              or discontinue any aspect of the Site at any time. We make no
+              commitment to update the materials on the Site to reflect current
+              events or circumstances.
+            </p>
+            <p>
+              Reliance on any information provided by the Site is solely at your
+              own risk. You are responsible for evaluating the accuracy,
+              completeness, and usefulness of any content before acting on it.
+            </p>
+          </div>
+
+          <div class="sec" id="t16">
+            <div class="sec-header">
+              <span class="sec-num">16</span>
+              <h2>Privacy Policy</h2>
+            </div>
+            <p>
+              Your use of the Site is also governed by our
+              <a href="privacy.html">Privacy Policy</a>, which is incorporated
+              into these Terms by reference. By using the Site, you consent to
+              our collection, use, and disclosure of information in accordance
+              with the Privacy Policy.
+            </p>
+            <p>
+              Our Privacy Policy explains: what information we collect, how we
+              collect it, how we use it, how we share it with third parties
+              (including Google for advertising purposes), your rights regarding
+              your personal data, and how you can exercise those rights. We
+              strongly encourage you to read it in full.
+            </p>
+          </div>
+
+          <div class="sec" id="t17">
+            <div class="sec-header">
+              <span class="sec-num">17</span>
+              <h2>DMCA &amp; Copyright Infringement</h2>
+            </div>
+            <p>
+              We respect intellectual property rights and expect users of the
+              Site to do the same. If you believe that any content on the Site
+              infringes your copyright, please submit a written notification to
+              us that includes the following information (a "DMCA Takedown
+              Notice"):
+            </p>
+            <ul>
+              <li>
+                A physical or electronic signature of the copyright owner or a
+                person authorized to act on their behalf
+              </li>
+              <li>
+                Identification of the copyrighted work claimed to have been
+                infringed
+              </li>
+              <li>
+                Identification of the material that is claimed to be infringing,
+                with sufficient detail to enable us to locate it on the Site
+              </li>
+              <li>
+                Your contact information, including name, address, telephone
+                number, and email address
+              </li>
+              <li>
+                A statement that you have a good faith belief that the disputed
+                use is not authorized by the copyright owner, its agent, or the
+                law
+              </li>
+              <li>
+                A statement that the information in the notification is
+                accurate, and under penalty of perjury, that you are authorized
+                to act on behalf of the copyright owner
+              </li>
+            </ul>
+            <p>
+              Send DMCA Takedown Notices to:
+              <strong>support@yoursite.com</strong>
+            </p>
+            <p>
+              We reserve the right to remove content alleged to be infringing
+              without prior notice, and to terminate access for users who
+              repeatedly infringe intellectual property rights.
+            </p>
+          </div>
+
+          <div class="sec" id="t18">
+            <div class="sec-header">
+              <span class="sec-num">18</span>
+              <h2>Modifications to These Terms</h2>
+            </div>
+            <p>
+              We reserve the right to revise, amend, or replace these Terms at
+              any time, at our sole discretion, and without prior notice to you.
+              When we make changes, we will update the "Last updated" date at
+              the top of this page.
+            </p>
+            <p>
+              It is your responsibility to review these Terms periodically for
+              changes. Your continued use of the Site following the posting of
+              any changes to these Terms constitutes your acceptance of and
+              agreement to the modified Terms. If you do not agree to the
+              modified Terms, you must stop using the Site immediately.
+            </p>
+            <p>
+              For material changes that significantly affect your rights or
+              obligations, we may provide additional notice through a prominent
+              banner or announcement on the Site, at our discretion.
+            </p>
+          </div>
+
+          <div class="sec" id="t19">
+            <div class="sec-header">
+              <span class="sec-num">19</span>
+              <h2>Termination</h2>
+            </div>
+            <p>
+              We reserve the right, at our sole discretion and without prior
+              notice or liability to you, to suspend, restrict, or terminate
+              your access to the Site and any services offered through it, for
+              any reason, including but not limited to:
+            </p>
+            <ul>
+              <li>Your breach of any provision of these Terms</li>
+              <li>Your violation of any applicable law or third-party right</li>
+              <li>
+                Conduct that we determine, in our sole discretion, to be harmful
+                to other users, third parties, or the Site
+              </li>
+              <li>Any fraudulent, abusive, or otherwise illegal activity</li>
+            </ul>
+            <p>
+              Upon termination, your right to use the Site immediately ceases.
+              All provisions of these Terms that by their nature should survive
+              termination shall survive, including, without limitation,
+              provisions regarding ownership, intellectual property, disclaimers
+              of warranty, limitations of liability, indemnification, and
+              dispute resolution.
+            </p>
+          </div>
+
+          <div class="sec" id="t20">
+            <div class="sec-header">
+              <span class="sec-num">20</span>
+              <h2>Governing Law</h2>
+            </div>
+            <p>
+              These Terms and any dispute arising out of or in connection with
+              them, or your access to or use of the Site, shall be governed by
+              and construed in accordance with the laws of the
+              <strong>State of Delaware, United States of America</strong>,
+              without regard to its conflict of law principles.
+            </p>
+            <p>
+              For users located outside the United States, you agree that any
+              claims you have relating to these Terms or the Site will be
+              resolved in accordance with the laws of Delaware, regardless of
+              the law that might otherwise apply based on your location.
+            </p>
+            <p>
+              The United Nations Convention on Contracts for the International
+              Sale of Goods does not apply to these Terms.
+            </p>
+          </div>
+
+          <div class="sec" id="t21">
+            <div class="sec-header">
+              <span class="sec-num">21</span>
+              <h2>Dispute Resolution &amp; Arbitration</h2>
+            </div>
+            <div class="callout callout-warn">
+              <span class="ci">⚠️</span>
+              <p>
+                This section requires you to resolve most disputes through
+                binding arbitration rather than in court, and waives your right
+                to a jury trial and class action participation. Please read
+                carefully.
+              </p>
+            </div>
+            <p>
+              <strong>Informal Resolution:</strong> Before initiating any formal
+              dispute resolution process, you agree to first contact us at
+              support@yoursite.com and attempt to resolve the dispute
+              informally. We will attempt to resolve your complaint within 30
+              days.
+            </p>
+            <p>
+              <strong>Binding Arbitration:</strong> If informal resolution
+              fails, you and we agree that any dispute, claim, or controversy
+              arising out of or relating to these Terms or your use of the Site
+              that cannot be resolved informally shall be resolved by final and
+              binding arbitration administered by the
+              <strong>American Arbitration Association (AAA)</strong> under its
+              Consumer Arbitration Rules, except as expressly provided otherwise
+              in this Section.
+            </p>
+            <p>
+              <strong>Waiver of Jury Trial:</strong> YOU AND WE EACH HEREBY
+              IRREVOCABLY WAIVE ANY AND ALL RIGHT TO TRIAL BY JURY IN ANY LEGAL
+              PROCEEDING ARISING OUT OF OR RELATED TO THESE TERMS OR YOUR USE OF
+              THE SITE.
+            </p>
+            <p>
+              <strong>Class Action Waiver:</strong> YOU AND WE AGREE THAT EACH
+              MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR OUR INDIVIDUAL
+              CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED
+              CLASS OR REPRESENTATIVE PROCEEDING. Any arbitration or legal
+              action shall be conducted on an individual basis and not as a
+              class, collective, or representative action.
+            </p>
+            <p>
+              <strong>Exceptions:</strong> Either party may bring an individual
+              action in small claims court or seek emergency injunctive relief
+              in a court of competent jurisdiction in connection with matters
+              relating to intellectual property infringement or the unauthorized
+              disclosure of confidential information.
+            </p>
+            <p>
+              <strong>Venue:</strong> For any matters not subject to
+              arbitration, you and we consent to exclusive jurisdiction and
+              venue in the state and federal courts located in
+              <strong>Delaware, United States</strong>.
+            </p>
+          </div>
+
+          <div class="sec" id="t22">
+            <div class="sec-header">
+              <span class="sec-num">22</span>
+              <h2>Severability</h2>
+            </div>
+            <p>
+              If any provision of these Terms is held by a court of competent
+              jurisdiction or arbitrator to be invalid, illegal, or
+              unenforceable under applicable law, that provision shall be
+              modified to the minimum extent necessary to make it enforceable,
+              or if it cannot be modified, it shall be severed from these Terms,
+              and the remaining provisions of these Terms shall continue in full
+              force and effect.
+            </p>
+            <p>
+              The invalidity or unenforceability of any provision in one
+              jurisdiction shall not affect the validity or enforceability of
+              that provision in any other jurisdiction.
+            </p>
+          </div>
+
+          <div class="sec" id="t23">
+            <div class="sec-header">
+              <span class="sec-num">23</span>
+              <h2>Entire Agreement</h2>
+            </div>
+            <p>
+              These Terms, together with our
+              <a href="privacy.html">Privacy Policy</a> and any other legal
+              notices or policies posted on the Site, constitute the
+              <strong>entire agreement</strong> between you and us with respect
+              to your use of the Site and supersede all prior and
+              contemporaneous understandings, agreements, representations, and
+              warranties, both written and oral, with respect to the Site.
+            </p>
+            <p>
+              No waiver by us of any term or condition set out in these Terms
+              shall be deemed a further or continuing waiver of such term or
+              condition or a waiver of any other term or condition, and any
+              failure by us to assert a right or provision under these Terms
+              shall not constitute a waiver of such right or provision.
+            </p>
+            <p>
+              You may not assign or transfer your rights or obligations under
+              these Terms without our prior written consent. We may freely
+              assign our rights and obligations under these Terms without
+              restriction.
+            </p>
+          </div>
+
+          <div class="sec" id="t24">
+            <div class="sec-header">
+              <span class="sec-num">24</span>
+              <h2>Contact Us</h2>
+            </div>
+            <p>
+              If you have any questions, concerns, or feedback regarding these
+              Terms of Use, or if you wish to report a violation, please contact
+              us:
+            </p>
+            <ul>
+              <li><strong>Email:</strong> support@yoursite.com</li>
+              <li>
+                <strong>Response time:</strong> We aim to respond to all
+                inquiries within <strong>30 business days</strong>
+              </li>
+            </ul>
+            <p>
+              For DMCA copyright infringement notices, please see Section 17 for
+              specific submission requirements.
+            </p>
+            <div class="callout callout-info">
+              <span class="ci">✅</span>
+              <p>
+                These Terms of Use have been reviewed for compliance with
+                <strong>Google Ads Destination Policies</strong>, FTC
+                endorsement guidelines, CCPA, GDPR, and applicable US and
+                international consumer protection standards. This document is
+                designed to meet the requirements for sites receiving
+                advertising traffic from Google Ads.
+              </p>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <footer>
+        <div class="footer-inner">
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+        <div class="footer-inner" style="margin-top: 0.75rem">
+          <p class="footer-copy">
+            &copy; 2026 YourSite. All rights reserved. &nbsp;·&nbsp; This site
+            uses Google Ads advertising technology. &nbsp;·&nbsp; This site
+            complies with all applicable Google Ads destination and content
+            policies. &nbsp;·&nbsp; See our
+            <a href="privacy.html">Privacy Policy</a> for data practices.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>

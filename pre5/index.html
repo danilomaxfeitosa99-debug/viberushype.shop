@@ -1,151 +1,554 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elegancia Méz — Luxus és Szellemi Tisztaság</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,600;1,400&family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Quicksand',sans-serif;background:#fdf8f5;color:#4a3f3a;line-height:1.8;font-size:15px;-webkit-font-smoothing:antialiased}
-img{max-width:100%;height:auto;display:block}
-a{color:inherit}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RG Cozinha e Alta Gastronomia LTDA | Magas szintu gasztronomiai megjelenes</title>
+  <meta name="description" content="Az RG Cozinha e Alta Gastronomia LTDA hivatalos bemutatkozasa. Atlathato vallalati adatok, gasztronomiai profil es felelos digitalis jelenlet Sao Pauloban.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0c0a06;
+      --panel: rgba(255, 250, 232, 0.08);
+      --panel-strong: rgba(255, 250, 232, 0.12);
+      --line: rgba(255, 232, 184, 0.18);
+      --text: rgba(255, 250, 240, 0.94);
+      --muted: rgba(255, 241, 214, 0.7);
+      --accent: #f5c842;
+      --accent-2: #e8903a;
+      --shadow: 0 26px 64px rgba(0, 0, 0, 0.32);
+      --radius: 24px;
+      --max: 1180px;
+    }
 
-.hdr{max-width:520px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between}
-.hdr-l{font-family:'Bodoni Moda',serif;font-size:15px;color:#3d2f2a;font-weight:600;letter-spacing:.5px}
-.hdr-l span{color:#c9956f}
-.hdr-r{font-size:7.5px;text-transform:uppercase;letter-spacing:1.5px;color:#c4a89a}
-.hdr-line{max-width:520px;margin:0 auto;height:1px;background:linear-gradient(90deg,transparent,#e8d4c8,transparent)}
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
-.w{max-width:480px;margin:0 auto;padding:14px 20px 40px}
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(245, 200, 66, 0.18), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(232, 144, 58, 0.18), transparent 26%),
+        var(--bg);
+      min-height: 100vh;
+    }
 
-.cat{display:inline-block;font-size:7.5px;letter-spacing:2px;text-transform:uppercase;color:#c9956f;background:#f5ebe0;padding:4px 12px;border-radius:20px;margin-bottom:8px;font-weight:500}
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 30%),
+        radial-gradient(circle at 50% 10%, rgba(245, 200, 66, 0.12), transparent 34%);
+      pointer-events: none;
+      z-index: 0;
+    }
 
-h1{font-family:'Bodoni Moda',serif;font-size:21px;line-height:1.35;color:#3d2f2a;margin-bottom:4px;font-weight:600}
-h1 em{font-style:italic;color:#c9956f}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-.sub{font-size:13px;color:#6a5f54;margin-bottom:3px;font-weight:300}
-.meta{font-size:7.5px;color:#c4a89a;margin-bottom:12px;letter-spacing:.3px}
+    .page {
+      position: relative;
+      z-index: 1;
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+      padding-bottom: 48px;
+    }
 
-.hero{border-radius:12px;overflow:hidden;margin-bottom:2px;box-shadow:0 4px 20px rgba(201,149,111,.12)}
-.hero img,.img2 img{cursor:pointer;transition:opacity .2s}.hero img:hover,.img2 img:hover{opacity:.88}
-.cap{font-size:7px;color:#c4a89a;margin-bottom:12px;font-style:italic}
+    header {
+      margin-top: 18px;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      border-radius: 22px;
+      background: rgba(12, 10, 6, 0.76);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 14px;
+    }
 
-.cta{text-align:center;margin:14px 0;padding:14px;background:#f5ebe0;border:1px solid #e8d4c8;border-radius:12px}
-.cta-t{font-family:'Bodoni Moda',serif;font-size:14px;color:#3d2f2a;margin-bottom:2px;font-weight:600}
-.cta-d{font-size:10.5px;color:#6a5f54;margin-bottom:8px;font-weight:300}
-.btn{display:inline-block;background:#c9956f;color:#fdf8f5;padding:9px 26px;font-size:9px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;border-radius:8px;transition:all .25s}
-.btn:hover{background:#a87a54;color:#fff;transform:translateY(-1px);box-shadow:0 4px 16px rgba(201,149,111,.35)}
-.cta-n{font-size:7px;color:#c4a89a;margin-top:4px}
+    .identity {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
 
-.bd p{margin-bottom:10px;font-weight:300;font-size:14px;color:#5a4f48}
-.bd strong{color:#3d2f2a;font-weight:500}
+    .seal {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display: grid;
+      place-items: center;
+      color: #241603;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+    }
 
-.img2{margin:12px 0;border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(201,149,111,.12)}
+    .identity strong,
+    h1,
+    h2 {
+      font-family: "Playfair Display", serif;
+    }
 
-.gq{margin:12px 0;padding:10px 14px;border-left:3px solid #c9956f;font-family:'Bodoni Moda',serif;font-size:13.5px;font-style:italic;color:#5a4f48;line-height:1.6;background:#f5ebe0;border-radius:0 12px 12px 0}
-.gq cite{font-family:'Quicksand',sans-serif;font-size:8px;color:#c4a89a;font-style:normal;display:block;margin-top:3px;letter-spacing:.3px}
+    .identity small,
+    .label,
+    .muted {
+      color: var(--muted);
+    }
 
-.hl{margin:12px 0;padding:10px 14px;background:#fdfaf7;border:1px solid #e8d4c8;border-radius:12px}
-.hl h3{font-family:'Bodoni Moda',serif;font-size:13px;color:#3d2f2a;margin-bottom:3px;font-weight:600}
-.hl p{font-size:12.5px;color:#6a5f54;margin-bottom:3px;font-weight:300;line-height:1.65}
-.hl p:last-child{margin-bottom:0}
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
 
-.dv{display:flex;align-items:center;gap:8px;margin:14px 0}
-.dv::before,.dv::after{content:'';flex:1;height:1px;background:#e8d4c8}
-.dv span{color:#c9956f;font-size:10px;font-family:'Bodoni Moda',serif}
+    nav a {
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: var(--muted);
+      border: 1px solid transparent;
+      transition: 0.2s ease;
+    }
 
-.disc{font-size:8px;color:#c4a89a;margin-top:14px;padding-top:10px;border-top:1px solid #e8d4c8;line-height:1.65}
+    nav a:hover {
+      color: var(--text);
+      border-color: var(--line);
+      background: rgba(255, 255, 255, 0.04);
+    }
 
-footer{max-width:520px;margin:0 auto;padding:12px 20px;text-align:center;font-size:7.5px;color:#c4a89a;border-top:1px solid #e8d4c8}
-footer a{color:#c9956f;text-decoration:none}footer a:hover{text-decoration:underline}
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 22px;
+      padding: 72px 0 24px;
+      align-items: stretch;
+    }
 
-@media(max-width:600px){h1{font-size:18px}.w{padding:12px 16px 36px}}
-</style>
+    .panel {
+      border-radius: var(--radius);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      backdrop-filter: blur(20px);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-main {
+      padding: 40px;
+    }
+
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 15px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.03);
+      font-size: 0.92rem;
+    }
+
+    .pulse {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 0 0 8px rgba(245, 200, 66, 0.14);
+    }
+
+    h1 {
+      margin: 22px 0 16px;
+      font-size: clamp(2.9rem, 6vw, 5rem);
+      line-height: 0.96;
+      max-width: 11ch;
+    }
+
+    .hero-main p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--muted);
+      max-width: 58ch;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 20px;
+      border-radius: 999px;
+      font-weight: 600;
+      border: 1px solid var(--line);
+      transition: 0.2s ease;
+    }
+
+    .cta.primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #241603;
+      border-color: transparent;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+    }
+
+    .hero-side {
+      padding: 28px;
+      display: grid;
+      gap: 14px;
+      align-content: start;
+    }
+
+    .mini {
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: var(--panel-strong);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .mini strong {
+      display: block;
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+    }
+
+    section {
+      padding: 18px 0;
+    }
+
+    .head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 20px;
+      margin-bottom: 18px;
+    }
+
+    .head h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin: 0;
+    }
+
+    .grid-3,
+    .grid-2,
+    .numbers {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .numbers { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+    .card {
+      padding: 28px;
+      border-radius: var(--radius);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      min-height: 100%;
+    }
+
+    .badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, rgba(245, 200, 66, 0.18), rgba(232, 144, 58, 0.22));
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 1.2rem;
+    }
+
+    .card h3 {
+      margin: 14px 0 10px;
+      font-size: 1.1rem;
+    }
+
+    .card p,
+    .facts li,
+    footer p {
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .numbers div {
+      padding: 18px;
+      border-radius: 18px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .numbers strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .facts {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .facts li + li {
+      margin-top: 12px;
+    }
+
+    .facts strong {
+      color: var(--text);
+    }
+
+    footer {
+      margin-top: 24px;
+      padding: 24px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 10px 0 2px;
+    }
+
+    .footer-links a {
+      color: var(--text);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+      padding-bottom: 2px;
+    }
+
+    @media (max-width: 980px) {
+      header,
+      .hero,
+      .grid-3,
+      .grid-2,
+      .numbers,
+      .head {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(calc(100% - 20px), var(--max));
+      }
+
+      header,
+      .hero-main,
+      .hero-side,
+      .card,
+      footer {
+        padding: 22px;
+      }
+
+      h1 {
+        font-size: clamp(2.4rem, 13vw, 3.5rem);
+      }
+
+      nav a {
+        padding: 8px 11px;
+        font-size: 0.88rem;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="page">
+    <header>
+      <div class="identity">
+        <div class="seal">RG</div>
+        <div>
+          <strong>RG Cozinha e Alta Gastronomia LTDA</strong><br>
+          <small>Magas szintu gasztronomiai es kulinaris szolgalatasok</small>
+        </div>
+      </div>
+      <nav>
+        <a href="#vallalat">Vallalat</a>
+        <a href="#mukodes">Mukodes</a>
+        <a href="#megfeleles">Megfeleles</a>
+        <a href="#adatok">Adatok</a>
+      </nav>
+    </header>
 
-<div class="hdr">
-<div class="hdr-l">Elegancia <span>Méz</span></div>
-<div class="hdr-r" id="dt"></div>
-</div>
-<div class="hdr-line"></div>
+    <main>
+      <section class="hero">
+        <article class="panel hero-main">
+          <div class="label">
+            <span class="pulse"></span>
+            Bejegyzett ceg Sao Pauloban
+          </div>
+          <h1>Gasztronomiai minoseg, atlathato digitalis jelenlet.</h1>
+          <p>
+            Az RG Cozinha e Alta Gastronomia LTDA vallalati oldala a magas szintu gasztronomiai tevekenyseget,
+            a hivatalos cegadatokat es a felelos online kommunikaciot mutatja be. A tartalom egyertelmu, tenyszeru
+            es a cegazonossag nyilvanos bemutatasara epul.
+          </p>
+          <div class="cta-row">
+            <a class="cta primary" href="#adatok">Cegadatok megtekintese</a>
+            <a class="cta" href="#megfeleles">Atlathatosagi alapelvek</a>
+          </div>
+        </article>
 
-<div class="w">
+        <aside class="panel hero-side">
+          <div class="mini">
+            <strong>Feltetelezett szektor</strong>
+            <span class="muted">A cegnev alapjan premium konyhai es gasztronomiai szolgaltatasok.</span>
+          </div>
+          <div class="mini">
+            <strong>Valos cegazonossag</strong>
+            <span class="muted">A CNPJ, a cim es a cegnev lathato modon jelenik meg az oldalon.</span>
+          </div>
+          <div class="mini">
+            <strong>Intezeti bemutatkozas</strong>
+            <span class="muted">Ez az oldal nem akcios igeretekre, hanem a vallalati hitelessegre epul.</span>
+          </div>
+        </aside>
+      </section>
 
-<span class="cat">Luxus & Szellemi Tisztaság</span>
+      <section id="vallalat">
+        <div class="head">
+          <div>
+            <span class="muted">Bemutatkozas</span>
+            <h2>Mit kepvisel a ceg</h2>
+          </div>
+          <p class="muted">A tartalom a vallalati adatok es az uzleti profil tenyszeru bemutatasara keszult.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <div class="badge">🍽</div>
+            <h3>Magas szintu gasztronomia</h3>
+            <p>A ceg neve alapjan a bemutatkozas a kulinaris minosegre, konyhai szakertelmre es rendezett szolgaltatasi kepre epul.</p>
+          </article>
+          <article class="card">
+            <div class="badge">🏛</div>
+            <h3>Hivatalos vallalati jelenlet</h3>
+            <p>A ceg teljes neve, adoazonositoja es fizikai cime azonosithato modon szerepel, ezaltal a latogato szamara ellenorizheto a mukodes.</p>
+          </article>
+          <article class="card">
+            <div class="badge">🤝</div>
+            <h3>Felelos kommunikacio</h3>
+            <p>A szoveg keruli a megtéveszto allitasokat, es kizarolag az intezmenyi hitelesseget, valamint a valos uzleti jelenletet hangsulyozza.</p>
+          </article>
+        </div>
+      </section>
 
-<h1>A <em>finom mézes elixír</em>, amelyet a budapest-pesti elit használ</h1>
-<p class="sub">Rózsaszirom, goji bogyó, gránátalma és arany méz — a finom ízlés receptje</p>
-<p class="meta"><span id="dt2"></span> · Elegancia Méz · 2 perc</p>
+      <section id="mukodes">
+        <div class="head">
+          <div>
+            <span class="muted">Mukodesi alapok</span>
+            <h2>Atlathato uzleti modell</h2>
+          </div>
+          <p class="muted">Az oldal celja a ceg bemutatasa egy egyseges, nyilt es konzisztens tartalmi szerkezetben.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <div class="badge">📣</div>
+            <h3>Targyszeru megjelenes</h3>
+            <p>A bemutatott informaciok az uzleti profilra, a ceg nyilvanos adataira es a szolgaltatasi jellegre koncentralnak, tulzo allitasok nelkul.</p>
+          </article>
+          <article class="card">
+            <div class="badge">🧾</div>
+            <h3>Ellenorizheto adatok</h3>
+            <p>A 60.836.441/0001-50 CNPJ es a Sao Pauloi cim az oldal kulon szekciojaban jelenik meg a vallalati hitelesseg alatamasztasara.</p>
+          </article>
+          <article class="card">
+            <div class="badge">🔍</div>
+            <h3>Egyseges tartalom</h3>
+            <p>Az oldal tartalma minden latogato szamara azonos, egyertelmu es nyilt vallalati tajekoztatast nyujt.</p>
+          </article>
+        </div>
+        <div class="numbers">
+          <div><strong>Sao Paulo</strong><span class="muted">SP, Brazilia</span></div>
+          <div><strong>CNPJ</strong><span class="muted">60.836.441/0001-50</span></div>
+          <div><strong>Szektor</strong><span class="muted">Alta gastronomia</span></div>
+          <div><strong>Nyelv</strong><span class="muted">Magyar</span></div>
+        </div>
+      </section>
 
-<figure class="hero">
-<a href="https://lp.viberushype.shop/preclick"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663297503148/jCMGTU5NUP78zZrraNsLhW/mem7-honey-rose-gold-luxury-JytH3JpP7Kj8BpyRtabTcu.webp" alt="Luxus méz rózsaszín márvány asztalon"></a>
-</figure>
-<p class="cap">Fotó: Elegancia Méz / Luxus szekció</p>
+      <section id="megfeleles">
+        <div class="head">
+          <div>
+            <span class="muted">Tartalmi megfeleles</span>
+            <h2>Vilagos vallalati informaciok</h2>
+          </div>
+          <p class="muted">A kialakitas az atlathatosagot, a hiteles cegazonossagot es a kovetheto uzleti bemutatkozast helyezi eloterbe.</p>
+        </div>
+        <div class="grid-2">
+          <article class="card">
+            <div class="badge">🛡</div>
+            <h3>Megtevesztes nelkuli kommunikacio</h3>
+            <p>A szovegek nem tartalmaznak valotlan igereteket, hanem a vallalati profil tenyszeru ismeteteset szolgáljak.</p>
+          </article>
+          <article class="card">
+            <div class="badge">📍</div>
+            <h3>Azonosithato uzemelteto</h3>
+            <p>A ceg teljes adatai es a mukodes helye lathato modon kerultek elhelyezesre, hogy a latogatók egyertelmu kepet kapjanak a vallalkozasrol.</p>
+          </article>
+        </div>
+      </section>
 
-<!-- CTA 1 -->
-<div class="cta">
-<p class="cta-t">Nézd meg az exkluzív receptet</p>
-<p class="cta-d">A budapest-pesti elit mézes titka videóban</p>
-<a href="https://lp.viberushype.shop/preclick" class="btn">Megnézem →</a>
-<p class="cta-n">Ingyenes exkluzív tartalom</p>
-</div>
+      <section id="adatok">
+        <div class="head">
+          <div>
+            <span class="muted">Nyilvanos cegadatok</span>
+            <h2>Azonosito informaciok</h2>
+          </div>
+          <p class="muted">Az alábbi adatok a vallalati jelenlet egyertelmu es nyilvanos bemutatasat szolgaljak.</p>
+        </div>
+        <div class="grid-2">
+          <article class="card">
+            <ul class="facts">
+              <li><strong>Cegnev:</strong> RG Cozinha e Alta Gastronomia LTDA</li>
+              <li><strong>CNPJ:</strong> 60.836.441/0001-50</li>
+              <li><strong>Domain:</strong> viberushype.shop/pre5/</li>
+              <li><strong>Feltetelezett tevekenyseg:</strong> gasztronomiai es kulinaris szolgaltatasok</li>
+            </ul>
+          </article>
+          <article class="card">
+            <ul class="facts">
+              <li><strong>Cim:</strong> Avenida Indianopolis 2950</li>
+              <li><strong>Varosresz:</strong> Indianopolis</li>
+              <li><strong>Varos / Allam:</strong> Sao Paulo, SP</li>
+              <li><strong>Irányitoszam:</strong> 04062-003</li>
+              <li><strong>Orszag:</strong> Brazilia</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
 
-<div class="bd">
-
-<p>Az <strong>V. kerületi</strong> lakások tetőteraszain, a <strong>Duna-parton</strong> és a <strong>Buda-hegyekben</strong> — egy különös szokás terjedett az elmúlt évben. Nem közönséges méz, hanem egy <strong>finom elixír</strong> rózsaszirmokkal, goji bogyóval és gránátalmával.</p>
-
-<p>A receptet egy <strong>neves budapest-pesti wellness szakértő</strong> osztotta meg — és azóta az elit körökben beszédtéma. Mögötte: az ötlet, hogy a <strong>szellemi tisztaság és a luxus összekapcsolódik</strong>.</p>
-
-<div class="gq">
-„Ezt az elixírt minden reggel fogyasztom — és teljesen megváltozott a napi energiám. Tiszta, fókuszált, nyugodt."
-<cite>— Olvasonő, Budapest V. kerület</cite>
-</div>
-
-</div>
-
-<figure class="img2">
-<a href="https://lp.viberushype.shop/preclick"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663297503148/jCMGTU5NUP78zZrraNsLhW/mem7-woman-budapest-luxury-U9m6wJYmWgTQvVRU3KdjN7.webp" alt="Elegáns nő a Duna-parton"></a>
-</figure>
-<p class="cap">Fotó: Elegancia Méz — Budapest, luxus apartman</p>
-
-<div class="bd">
-
-<div class="hl">
-<h3>Az exkluzív videóban megtudhat:</h3>
-<p>A pontos luxus méz receptet rózsaszirmokkal és goji bogyóval. Miért pont ezek az összetevők — a szellemi tisztaság és a test harmóniájáért. Hogyan illeszthető be a napi rutinba — reggel, a nap kezdetekor.</p>
-</div>
-
-<p>A <strong>Andrássy út</strong> szalonjaiban, a <strong>Margitszigeti</strong> wellness központban és az <strong>V. kerületi</strong> privát klubokban — egyre többen kérdezik erről az exkluzív receptről. Ha kíváncsi az összes részletre, érdemes megnézni az exkluzív videót.</p>
-
-</div>
-
-<div class="dv"><span>✨</span></div>
-
-<!-- CTA 2 -->
-<div class="cta">
-<p class="cta-t">Fedezd fel az exkluzív méz receptet</p>
-<p class="cta-d">Rövid videó a budapest-pesti elit titkáról</p>
-<a href="https://lp.viberushype.shop/preclick" class="btn">Videó megtekintése →</a>
-<p class="cta-n">Exkluzív tartalom</p>
-</div>
-
-<p class="disc"><em><strong>Fontos:</strong> Ez a cikk kizárólag tájékoztató jellegű, és nem minősül orvosi tanácsadásnak. Az étrend-kiegészítők nem helyettesítik a változatos étrendet és az egészséges életmódot. Az egyéni eredmények változhatnak. Bármilyen étrendi változtatás előtt konzultáljon orvosával.</em></p>
-
-</div>
-
-<footer>
-<p><a href="privacy.html">Adatvédelem</a> · <a href="terms.html">Feltételek</a></p>
-<p style="margin-top:2px">© 2026 Elegancia Méz · CNPJ: 60.836.441/0001-50</p>
-</footer>
-
-<script>
-document.addEventListener('DOMContentLoaded',function(){var d=new Date(),m=['január','február','március','április','május','június','július','augusztus','szeptember','október','november','december'];var ds=d.getFullYear()+'. '+m[d.getMonth()]+' '+d.getDate()+'.';document.getElementById('dt').textContent=ds;var dt2=document.getElementById('dt2');if(dt2)dt2.textContent=ds;});
-(function(){var q=window.location.search;if(!q)return;document.querySelectorAll('a[href]').forEach(function(a){var h=a.getAttribute('href');if(!h||h.startsWith('#')||h.startsWith('mailto:'))return;a.setAttribute('href',h.includes('?')?h+'&'+q.substring(1):h+q)})})();
-</script>
-<script type="text/javascript" src="https://lp.viberushype.shop/pretrack.js?rtkcmpid=69cd29468d89d5cd77835760"></script>
+    <footer class="panel">
+      <p>RG Cozinha e Alta Gastronomia LTDA · CNPJ 60.836.441/0001-50 · Avenida Indianopolis 2950, Indianopolis, Sao Paulo - SP, 04062-003, Brazilia.</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="disclaimer.html">Disclaimer</a>
+      </div>
+      <p>Az oldal a megrendelotol kapott cegnev es hivatalos adatok alapjan keszult vallalati bemutatkozas, intezmenyi es atlathato strukturaban.</p>
+    </footer>
+  </div>
 </body>
 </html>
